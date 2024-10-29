@@ -1,6 +1,6 @@
 <x-layout>
     <div class="book-container single-book">
-        <h1>Create new book</h1>
+        <h1>Edit book</h1>
 
         <form action="/book" method="POST" class="note">
             @csrf
