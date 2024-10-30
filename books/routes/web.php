@@ -9,5 +9,5 @@ Route::get('/book/create',[BookController::class, 'create']);
 Route::post('/book',[BookController::class, 'store']);
 Route::get('/book/{id}',[BookController::class, 'show']);
 Route::get('/book/{id}/edit',[BookController::class, 'edit']);
-Route::get('/book/{id}',[BookController::class, 'update']);
+Route::put('/book/{id}',[BookController::class, 'update']);
 Route::delete('/book/{id}',[BookController::class, 'destroy']);

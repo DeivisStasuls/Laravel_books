@@ -13,8 +13,11 @@
             <div class="book-buttons">
                 <a href="/book/{{ $book->id }}" class="book-edit-button">View</a>
                 <a href="/book/{{ $book->id }}/edit" class="book-edit-button">Edit</a>
-                <button class="book-delete-button">Delete</button> 
-            </div>
+                <form action="/book/{{$book->id}}" method="post">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="book-delete-button" onclick="return confirm('Are you sure you want to delete this book?');">Delete</button>            </div>
+                </form>
             @endforeach
 
         </div>
